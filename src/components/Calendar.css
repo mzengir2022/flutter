@@ -1,0 +1,23 @@
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #f44336; /* red */
+  --rdp-background-color: #d32f2f; /* lighter red */
+  border: 1px solid #f44336;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #121212;
+  color: white;
+}
+
+.rdp-head_cell {
+  color: #f44336;
+}
+
+.rdp-day_selected {
+  background-color: #f44336 !important;
+  color: white !important;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #d32f2f;
+}
