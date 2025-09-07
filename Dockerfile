@@ -2,15 +2,16 @@
 FROM node:18-alpine AS deps
 WORKDIR /app
 
-# Copy package.json and lockfile
-COPY package.json package-lock.json* ./
+# Copy package.json
+COPY package.json ./
 # Install dependencies
-RUN npm install --frozen-lockfile
+RUN npm install
 
 # Stage 2: Build the application
 FROM node:18-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/package.json ./package.json
 COPY . .
 
 # Build the Next.js app
