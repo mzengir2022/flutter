@@ -1,7 +1,9 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Clock from '../components/Clock';
+import dynamic from 'next/dynamic';
 import Calendar from '../components/Calendar';
+
+const Clock = dynamic(() => import('../components/Clock'), { ssr: false });
 
 export default function HomePage() {
   return (
