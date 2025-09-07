@@ -19,7 +19,7 @@ export default function Clock() {
 
   return (
     <Typography variant="h1" component="div" sx={{ fontWeight: 'bold', mb: 4 }}>
-      {time.toLocaleTimeString('en-US', {
+      {time.toLocaleTimeString('fa-IR', {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
